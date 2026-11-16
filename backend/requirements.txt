@@ -1,0 +1,24 @@
+# Runtime dependencies. Versions are pinned to releases audited with pip-audit
+# (no known vulnerabilities at the time of pinning); re-run `pip-audit -r
+# requirements.txt` when bumping.
+fastapi==0.162.0
+starlette==1.10.0
+uvicorn[standard]==0.54.0
+pydantic[email]==2.14.1
+pydantic-settings==2.16.1
+motor==3.7.1
+pymongo==4.19.0
+passlib[bcrypt]==1.7.4
+bcrypt==4.0.1  # passlib 1.7.4 is incompatible with bcrypt >= 4.1
+PyJWT==2.15.1  # replaces python-jose (unfixed advisories, drags in ecdsa)
+cryptography==50.0.2
+python-multipart==0.0.32
+python-dotenv==1.2.4
+openai==1.66.3
+
+# Phase 5: resume/JD parsing
+PyMuPDF==1.28.2
+python-docx==1.2.0
+
+# Phase 7: speech analytics (requires ffmpeg installed on the system)
+pydub==0.25.1
