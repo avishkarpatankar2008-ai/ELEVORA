@@ -6,6 +6,7 @@ import { SECTION_LINKS } from "./data";
 import { landingScroll } from "./scroll";
 import { Dot, MButton } from "./ui";
 import { useLandingLinks } from "./useLandingLinks";
+import Image from "next/image";
 
 /** Fixed top bar (wordmark, section links, call to action) plus the phone menu overlay. */
 export function LandingNav() {
@@ -58,7 +59,18 @@ export function LandingNav() {
 
   return (
     <header id="navigation" className="nav" data-8b-section="navigation">
-      <a className="nav__brand" href="#hero" aria-label="ELEVORA, back to the top">
+      <a
+        className="nav__brand"
+        href="#hero"
+        aria-label="ELEVORA, back to the top"
+      >
+        <Image
+          src="/elevora-mark.png"
+          alt=""
+          width={36}
+          height={36}
+          priority
+        />
         ELEVORA
         <Dot />
       </a>
